@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "../store/actions/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { LOG_IN } from "../apis/apiRoutes";
 import axios from '../apis/axios'
@@ -23,11 +22,11 @@ const Login = () => {
       try {
         setLoading(true)
         const response = await axios.post(LOG_IN, formData);
-        console.log("response", response);
         if (response.data.success) {
           setLoading(false)
           navigate("/");
-          localStorage.setItem('isAuthenticated', response.data.payload.token)
+          localStorage.setItem('isAuthenticated', response?.data?.payload?.token)
+          localStorage.setItem('id', response?.data?.payload?.user?._id)
         } else {
           setLoading(false)
 
