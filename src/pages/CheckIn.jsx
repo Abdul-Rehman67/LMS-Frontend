@@ -27,6 +27,7 @@ const CheckIn = () => {
             if (response?.data?.success) {
                 setLoading(false)
                 alert(response.data.message)
+                navigate("/")
             }
         }
         catch (e) {

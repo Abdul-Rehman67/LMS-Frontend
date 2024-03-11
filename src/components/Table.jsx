@@ -103,7 +103,7 @@ const Table = ({ }) => {
             </div>
           ) : (
             <span className="flex justify-center items-center  font-bold">
-              No transaction
+              No Books
             </span>
           )}
         </div>
