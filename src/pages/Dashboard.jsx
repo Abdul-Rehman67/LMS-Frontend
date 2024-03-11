@@ -52,7 +52,7 @@ const Dashboard = () => {
                 type="button"
                 onClick={GotoChecOut}
                 disabled={selectedBook ? selectedBook?.isCheckedOut : true}
-                className={selectedBook && !selectedBook.isCheckedOut ? 'bg-blue-500 rounded w-full md:text-md text-xs' : 'bg-gray-rounded w-full md:text-md text-xs'}
+                className={selectedBook && !selectedBook.isCheckedOut ? 'bg-blue-500 rounded w-full md:text-md text-xs' : 'bg-gray-300 rounded w-full md:text-md text-xs'}
               >
                 Check Out
               </button>
